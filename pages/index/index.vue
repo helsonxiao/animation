@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<uni-icons :type="iconType" size="30" @click="switchStar"></uni-icons>
+		<!-- <uni-icons :type="iconType" size="30" @click="switchStar"></uni-icons> -->
     <view :class="starClass" @click="star"></view>
     <!-- <view class="heart"></view> -->
 	</view>
@@ -14,7 +14,7 @@
     },
 		data() {
 			return {
-				iconType: 'star',
+				// iconType: 'star',
         starClass: 'fave',
 			}
 		},
@@ -22,15 +22,15 @@
 
 		},
 		methods: {
-      switchStar() {
-        if (this.iconType === 'star') {
-          this.iconType = 'star-filled';
-          return;
-        }
-        this.iconType = 'star';
-      },
+      // switchStar() {
+      //   if (this.iconType === 'star') {
+      //     this.iconType = 'star-filled';
+      //     return;
+      //   }
+      //   this.iconType = 'star';
+      // },
       star() {
-        this.starClass += " active";
+        this.starClass += " active"; // this.starClass = this.starClass + " active";
       }
 		},
 	}
@@ -53,8 +53,8 @@
   }
   .fave.active {
     background-position: -3519px 0;
-    transition: background 0.8s steps(55);
-    /* transition: background 0.8s linear; */
+    transition: background 1s steps(55);
+    /* transition: background 1s linear; */
   }
   
   .heart {
